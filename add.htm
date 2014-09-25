@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link charset="UTF-8" href="font.css" rel="stylesheet" type="text/css" />
+<title>語料入力</title>
+</head>
+<body>
+<form id="frmAdd" action="add.php?mode=add" method="POST" enctype="multipart/form-data">
+<fieldset><legend>追加</legend>
+	<table>
+	<tr><td>作者</td>
+		<td><input type="text" name="author" /></td></tr>
+	<tr><td>国籍</td>
+		<td>
+			<input type="radio" name="country" value="1" checked="true" />日本語
+			<input type="radio" name="country" value="0" />中国語
+		</td></tr>
+	<tr><td>作文</td>
+		<td><input type="text" name="work" /></td></tr>
+	<tr><td>番号</td>
+		<td><input type="text" name="chapter" /></td></tr>
+	<tr><td>提供者</td>
+		<td><input type="text" name="editor" /></td></tr>
+	<tr><td>言語</td>
+		<td>
+			<input type="radio" name="lang" value="1" checked="true" />日本語
+			<input type="radio" name="lang" value="0" />中国語
+		</td></tr>
+	<tr><td>パス</td>
+		<td><input type="file" name="path" /></td></tr>
+	</table>
+	<br/><input type="submit" />
+</fieldset>
+</form>
+
+<form id="frmXls" action="add.php?mode=xls" method="POST" enctype="multipart/form-data">
+<fieldset><legend>大量入力</legend>
+	<input type="file" name="path" />
+	<br />
+	<input type="submit" />
+	注意：データが多すぎる場合、時間がかかることがあります。
+</fieldset>
+</form>
+
+<form id="frmDel" action="add.php?mode=del" method="POST" enctype="multipart/form-data">
+<fieldset><legend>エディタ</legend>
+	<input type="submit" value="データベースを空にする" />
+</fieldset>
+</form>
+</body>
+</html>
