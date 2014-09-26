@@ -97,6 +97,7 @@ function readText($table, $colEdit, $path) {
 		$sTxt = make_xml_semiangle(mb_substr($row, $pos, mb_strlen($row) - $pos));
 
 		$sTxt = preg_replace('/<(.+?)\/(.+?)→(.+?)>/', '<$1>$2</$1|$3>', $sTxt);
+		$sTxt = strtr($sTxt, array('○' => ''));
 
 		preg_match_all('/<\/(.+?)\|/', $sTxt, $sErr, PREG_PATTERN_ORDER);
 
